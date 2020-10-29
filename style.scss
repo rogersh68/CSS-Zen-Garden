@@ -1,0 +1,28 @@
+/*** Imports ***/
+@import 'partials/content';
+@import 'partials/curtain';
+@import 'partials/fonts';
+@import 'partials/footer';
+@import 'partials/layout';
+@import 'partials/sidebar';
+
+/*** General Formatting ***/
+html {
+    height: 100%;
+    margin: auto;
+}
+
+body {
+    margin: auto;
+    background: url(svgs/tile.svg);
+    background-repeat: repeat;
+    background-size: 150px;
+}
+
+@keyframes flickerCandles{
+    0% {background: url(svgs/candles_1.svg);}
+    10% {background: url(svgs/candles_2.svg);}
+    12% {background: url(svgs/candles_1.svg);}
+    40% {background: url(svgs/candles_2.svg);}
+    43% {background: url(svgs/candles_1.svg);}
+}

@@ -1,0 +1,48 @@
+/*** General ***/
+.page-wrapper {
+    margin-bottom: 60vw;
+    //max-width: 1200px;
+}
+
+.summary, .preamble, .main, .sidebar {
+    margin: 1em;
+}
+
+/*** Medium ***/
+@media (min-width: 35em) {
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+    .wrapper > div {
+        flex: 1;
+    }
+
+    .page-wrapper {
+        margin-bottom: 40vw;
+    }
+}
+
+/*** Large ***/
+@media (min-width: 60em) {
+    .page-wrapper {
+        display: grid;
+        grid-template-columns: 60vw 1fr;
+        margin-bottom: 30vw;
+    }
+
+    .main {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .sidebar {
+        grid-column: 2/3;
+        grid-row: 1/3;
+        margin-top: 400px;
+    }
+
+    .wrapper {
+        display: block;
+    }
+}

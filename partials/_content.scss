@@ -1,0 +1,231 @@
+/*** Variables ***/
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Montserrat&display=swap');
+$header-font: 'Architects Daughter', cursive;
+$body-font: 'Montserrat', sans-serif;
+$candle-zoom: .05;
+$plant-zoom: .07;
+$image-margin: 200px;
+
+/*** Keyframes ***/
+@keyframes flicker1 {
+    0% {content: url(svgs/candle_1.png);}
+    25% {content: url(svgs/candle_2.png);}
+    30% {content: url(svgs/candle_1.png);}
+    50% {content: url(svgs/candle_2.png);}
+    55% {content: url(svgs/candle_1.png);}
+    75% {content: url(svgs/candle_2.png);}
+    80% {content: url(svgs/candle_1.png);}
+    95% {content: url(svgs/candle_2.png);}
+    100% {content: url(svgs/candle_1.png);}
+}
+
+@keyframes flicker2 {
+    0% {content: url(svgs/candles_1.png);}
+    10% {content: url(svgs/candles_2.png);}
+    12% {content: url(svgs/candles_1.png);}
+    30% {content: url(svgs/candles_2.png);}
+    32% {content: url(svgs/candles_1.png);}
+    50% {content: url(svgs/candles_2.png);}
+    52% {content: url(svgs/candles_1.png);}
+    75% {content: url(svgs/candles_2.png);}
+    78% {content: url(svgs/candles_1.png);}
+    97% {content: url(svgs/candles_2.png);}
+    100% {content: url(svgs/candles_1.png);}
+}
+
+/*** General ***/
+h2, h3 {
+    padding: .5em;
+    margin: 0;
+}
+
+.summary {
+    background-color:#fef0d7;
+    border-radius: 20px;
+    padding: 1em;
+}
+
+.preamble > p {
+    background-color: #fef0d7;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+.preamble p:nth-child(2) {
+    border-radius: 20px 20px 0 0;
+}
+
+.preamble p:nth-child(4) {
+    border-radius: 0 0 20px 20px;
+}
+
+.explanation > p {
+    background-color: #fef0d7;
+    padding: 1em;
+    margin: 0;
+}
+
+.explanation p:nth-child(2) {
+    border-radius: 20px 20px 0 0;
+}
+
+.explanation p:nth-child(3) {
+    border-radius: 0 0 20px 20px;
+}
+
+.participation > p {
+    background-color: #fef0d7;
+    padding: 1em;
+    margin: 0;
+}
+
+.participation p:nth-child(2) {
+    border-radius: 20px 20px 0 0;
+}
+
+.participation p:nth-child(4) {
+    border-radius: 0 0 20px 20px;
+}
+
+.benefits > p {
+    background-color: #fef0d7;
+    border-radius: 20px;
+    padding: 1em;
+    margin: 0;
+}
+
+.requirements > p {
+    background-color: #fef0d7;
+    padding: 1em;
+    margin: 0;
+}
+
+.requirements p:nth-child(2) {
+    border-radius: 20px 20px 0 0;
+}
+
+.requirements p:nth-child(6) {
+    border-radius: 0 0 20px 20px;
+}
+
+
+/*** The Beauty of CSS Design ***/
+h2:before {
+    content: url(svgs/candle_1.png);
+    zoom: $candle-zoom;
+    animation: flicker1 3s linear 2s infinite alternate;
+    display: block;
+}
+
+/*** The Road to Enlightenment ***/
+.preamble h3:before {
+    content: url(svgs/candles_1.png);
+    zoom: $candle-zoom;
+    animation: flicker2 4s linear 2s infinite alternate;
+    display: block;
+}
+
+/*** So What is This About? ***/
+.explanation h3:before {
+    content: url(svgs/plant_1.png);
+    zoom: $plant-zoom;
+    display: block;
+}
+
+/*** Participation ***/
+.participation h3:before {
+    content: url(svgs/candle_1.png);
+    zoom: $candle-zoom;
+    animation: flicker1 3s linear 2s infinite alternate-reverse;
+    display: block;
+}
+
+/*** Benefits ***/
+.benefits h3:before {
+    content: url(svgs/plant_2.png);
+    zoom: $plant-zoom;
+    display: block;
+}
+
+/*** Requirements ***/
+.requirements h3:before {
+    content: url(svgs/candles_1.png);
+    zoom: $candle-zoom;
+    animation: flicker2 4s linear 2s infinite alternate-reverse;
+    display: block;
+}
+
+/*** Medium ***/
+@media (min-width: 35em) {
+    /*** The Beauty of CSS Design ***/
+    h2:before {
+        content: url(svgs/candle_1.png);
+        vertical-align: bottom;
+        margin-right: $image-margin;
+        zoom: $candle-zoom;
+        animation: flicker1 5s linear 2s infinite alternate;
+        display: inline-block;
+    }
+
+    /*** The Road to Enlightenment ***/
+    .preamble h3:after {
+        content: url(svgs/candles_1.png);
+        vertical-align: bottom;
+        margin-left: $image-margin;
+        zoom: $candle-zoom;
+        animation: flicker2 5s linear 2s infinite alternate;
+        display: inline-block;
+    }
+
+    .preamble h3:before {
+        display: none;
+    }
+
+    /*** So What is This About? ***/
+    .explanation h3:before {
+        content: url(svgs/plant_1.png);
+        vertical-align: middle;
+        zoom: $plant-zoom;
+        display: inline-block;
+    }
+
+    /*** Participation ***/
+    .participation h3:before {
+        content: url(svgs/candles_1.png);
+        vertical-align: bottom;
+        margin-right: $image-margin;
+        zoom: $candle-zoom;
+        animation: flicker2 5s linear 2s infinite alternate;
+        display: inline-block;
+    }
+
+    .participation h3:after {
+        content: url(svgs/candle_1.png);
+        vertical-align: bottom;
+        margin-left: $image-margin;
+        zoom: $candle-zoom;
+        animation: flicker 5s linear 2s infinite alternate;
+    }
+
+    /*** Benefits ***/
+    .benefits h3:after {
+        content: url(svgs/plant_2.png);
+        vertical-align: bottom;
+        margin-left: $image-margin;
+        zoom: $plant-zoom;
+    }
+
+    .benefits h3:before{
+        display: none;
+    }
+
+    /*** Requirements ***/
+    .requirements h3:before {
+        content: url(svgs/candles_1.png);
+        vertical-align: bottom;
+        margin-right: $image-margin;
+        zoom: $candle-zoom;
+        animation: flicker2 5s linear 2s infinite alternate;
+        display: inline-block;
+    }
+}

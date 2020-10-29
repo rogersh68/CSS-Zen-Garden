@@ -1,0 +1,32 @@
+.intro h1 {
+    background: url(svgs/curtain_1.svg) 0 0/cover no-repeat;
+    width: 75vw;
+    height: 70vw;
+    padding-left: 25vw;
+    padding-top: 30vw;
+    margin: 0;
+    color: rgba($color: darken(#fef0d7, 15%), $alpha: 0);
+}
+
+.intro h1:hover {
+    background: url(svgs/curtain_2.svg) 0 0/cover no-repeat;
+    color: rgba($color: darken(#fef0d7, 15%), $alpha: 1);
+    transition: 1s;
+}
+
+@media (min-width:35em){
+    .intro h1 {
+        width: 75vw;
+        height: 60vw;
+        padding-top: 36vw;
+    }
+}
+
+@media (min-width:60em){
+    .intro h1 {
+        width: 50vw;
+        height: 40vw;
+        padding-left: 11.5vw;
+        padding-top: 20vw;
+    }
+}
